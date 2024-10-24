@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Workflow</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-iframe {
+            width: 100%;
+            height: 100px;
+            /* Adjust height based on your header content */
+        }
+
+        body {
+            margin-top: 100px;
+            /* This should match the height of the header */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <iframe src="../INCLUDES/header.html" frameborder="0" class="header-iframe"></iframe>
+    </header>
+    <div class="container">
+        <div class="workflow-header">
+            <p>MY WORKFLOW</p>
+            <div class="arrow">&rarr;</div>
+        </div>
+        <ul class="workflow-list">
+            <li>
+                <span class="number">01</span> REQUIREMENTS ANALYSIS
+            </li>
+            <li>
+                <span class="number">02</span> ASK ABOUT DEADLINES AND RESTRICTIONS
+            </li>
+            <li>
+                <span class="number">03</span> SETTING UP THE ENVIRONMENT
+            </li>
+            <li>
+                <span class="number">04</span> PROGRAMMING
+            </li>
+            <li>
+                <span class="number">05</span> TESTING MY RESULTS
+            </li>
+            <li>
+                <span class="number">06</span> SUPPORTING AND SCALING MY CODE
+            </li>
+        </ul>
+        <div class="scroll-arrow">&darr;</div>
+    </div>
+</body>
+</html>

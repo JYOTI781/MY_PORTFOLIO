@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            /* Black background */
+            color: #ffffff;
+            /* White text */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            /* White text for links */
+            transition: color 0.3s ease;
+            /* Smooth transition for color */
+        }
+
+        nav ul li a:hover {
+            color: #e0e0e0;
+            /* Change color on hover */
+        }
+
+        .header-line {
+            height: 4px;
+            /* Height of the line */
+            background: linear-gradient(to right, #e91e63, #ff9800);
+            /* Gradient color */
+            margin: 10px 0;
+            /* Spacing around the line */
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+            /* Gradient background */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            /* Subtle shadow */
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .role {
+            font-size: 60px;
+            font-weight: bold;
+            opacity: 0;
+            /* Start hidden */
+            transform: translateY(20px);
+            /* Start slightly lower */
+            animation: fadeInOut 8s infinite;
+            /* Animation for fade in/out */
+        }
+
+        @keyframes fadeInOut {
+
+            0%,
+            20% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            25%,
+            95% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        /* Delay for each role */
+        .role:nth-of-type(1) {
+            animation-delay: 0s;
+        }
+
+        .role:nth-of-type(2) {
+            animation-delay: 2s;
+        }
+
+        .role:nth-of-type(3) {
+            animation-delay: 4s;
+        }
+
+        .role:nth-of-type(4) {
+            animation-delay: 6s;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e0e0e0;
+            padding: 10px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 18px;
+            color: black;
+            /* Black text inside the tag */
+        }
+
+        .description,
+        .goal {
+            margin-top: 20px;
+            line-height: 1.6;
+            max-width: 500px;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .right img {
+            width: 300px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+            /* Smooth scaling transition */
+        }
+
+        .right img:hover {
+            transform: scale(1.05);
+            /* Scale image on hover */
+        }
+
+        .profile-img {
+            width: 100%;
+            /* Maintain aspect ratio */
+            height: auto;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #222;
+            /* Dark background for the footer */
+            color: #ffffff;
+            /* White text for the footer */
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            /* Space between social media links */
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: #ffffff;
+            /* White text for links */
+            transition: color 0.3s ease, transform 0.3s ease;
+            /* Smooth transition for color and scaling */
+            font-size: 24px;
+            /* Icon size */
+        }
+
+        .social-media a:hover {
+            color: #e0e0e0;
+            /* Change color on hover */
+            transform: scale(1.1);
+            /* Slightly increase size on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="name">JYOTIRMOY GOSWAMI</div>
+        <nav>
+            <ul>
+                <li><a href="./STORY/story.html">Story</a></li>
+                <li><a href="./WORKFLOW/Workflow.html">Workflow</a></li>
+                <li><a href="./PROJECTS/projects.html">Projects</a></li>
+                <li><a href="./EXPERIENCE/experience.html">Experience</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="header-line"></div> <!-- New line below header -->
+
+    <section class="main">
+        <div class="left">
+            <div class="role fade-in">FRONT-END DEVELOPER</div>
+            <div class="role fade-in">BACK-END DEVELOPER</div>
+            <div class="role fade-in">SQL DEVELOPER</div>
+            <div class="role fade-in">PHP DEVELOPER</div>
+            <div class="tag">JUNIOR</div>
+            <p class="description">Hi there! My name is Jyotirmoy and I’m a 22-year-old ambitious junior front-end
+                developer. Now I’m looking for a new position and new challenges.</p>
+            <p class="goal">My goal is to learn something new every day, improve my skills, and solve users' and
+                business issues. I can quickly analyze problems and solve them both independently and in a team.</p>
+        </div>
+        <div class="right">
+            <img src="./jyotirmoynw.jpg" alt="Profile Image" class="profile-img">
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com/YOUR_PROFILE" target="_blank">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+            </a>
+            <a href="https://twitter.com/YOUR_PROFILE" target="_blank">
+                <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+            </a>
+            <a href="https://instagram.com/YOUR_PROFILE" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+            </a>
+            <a href="https://github.com/YOUR_PROFILE" target="_blank">
+                <i class="fab fa-github"></i> <!-- GitHub icon -->
+            </a>
+        </div>
+        <p class="copyright">© 2024 Jyotirmoy Goswami. All rights reserved. This content is exclusively for Jyotirmoy
+            Goswami and may not be used by others.</p>
+    </footer>
+</body>
+
+</html>

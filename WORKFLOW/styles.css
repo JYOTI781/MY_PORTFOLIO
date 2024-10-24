@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #2c2c2c, #0d0d0d);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 60%;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+}
+
+.workflow-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #cccccc;
+    position: relative;
+}
+
+.workflow-header p {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #cccccc;
+    position: relative;
+    display: inline-block;
+}
+
+.workflow-header p::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #00ffb0;
+    transition: width 0.4s ease;
+    -webkit-transition: width 0.4s ease;
+}
+
+.workflow-header p:hover::after {
+    width: 100%;
+    left: 0;
+    background: #00ffb0;
+}
+
+.arrow {
+    font-size: 30px;
+    color: #00ffb0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.arrow:hover {
+    transform: translateX(10px);
+}
+
+.workflow-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.workflow-list li {
+    font-size: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #555555;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.workflow-list li:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+.workflow-list li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    width: 5px;
+    height: 100%;
+    background-color: #00ffb0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.workflow-list li:hover::before {
+    opacity: 1;
+}
+
+.number {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #888888;
+    transition: color 0.3s ease;
+}
+
+.workflow-list li:hover .number {
+    color: #00ffb0;
+}
+
+.scroll-arrow {
+    font-size: 32px;
+    color: #00ffb0;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.7;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.scroll-arrow:hover {
+    transform: translateX(-50%) translateY(10px);
+}
+
+/* Keyframes for smooth fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

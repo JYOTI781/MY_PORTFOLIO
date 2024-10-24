@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative; /* To position the pseudo-element */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff; /* White text for links */
+    transition: color 0.3s ease; /* Smooth transition for color */
+    padding: 10px 15px; /* Adding some padding */
+    display: inline-block; /* To make padding effective */
+}
+
+nav ul li a::after {
+    content: ""; /* Create an empty element */
+    position: absolute; /* Position it absolutely within the list item */
+    left: 0; /* Align it to the left */
+    bottom: 0; /* Align it to the bottom */
+    width: 100%; /* Full width */
+    height: 2px; /* Height of the underline */
+    background-color: #ff9800; /* Color of the underline */
+    transform: scaleX(0); /* Start hidden */
+    transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+nav ul li a:hover {
+    color: #e0e0e0; /* Change color on hover */
+    text-decoration: none;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.left {
+    flex: 1;
+}
+
+.role {
+    font-size: 60px;
+    font-weight: bold;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px) scale(0.8); /* Start slightly lower and smaller */
+    animation: fadeInOut 8s infinite; /* Animation for fade in/out */
+}
+
+@keyframes fadeInOut {
+    0%, 20% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* Show normally */
+    }
+    25%, 95% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8); /* Fade out and move down */
+    }
+    30%, 40% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.1); /* Slight upward bounce */
+    }
+    45% {
+        transform: translateY(0) scale(1); /* Return to normal */
+    }
+}
+
+/* Delay for each role */
+.role:nth-of-type(1) { animation-delay: 0s; }
+.role:nth-of-type(2) { animation-delay: 2s; }
+.role:nth-of-type(3) { animation-delay: 4s; }
+.role:nth-of-type(4) { animation-delay: 6s; }
+
+.tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: black; /* Black text inside the tag */
+}
+
+.description, .goal {
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    width: 300px;
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.right img:hover {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+.profile-img {
+    width: 100%; /* Maintain aspect ratio */
+    height: auto;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #222; /* Dark background for the footer */
+    color: #ffffff; /* White text for the footer */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between social media links */
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #ffffff; /* White text for links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+    font-size: 24px; /* Icon size */
+}
+
+.social-media a:hover {
+    color: #e0e0e0; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.header-line {
+    height: 4px; /* Height of the line */
+    background: linear-gradient(to right, #e91e63, #ff9800); /* Gradient color */
+    margin: 10px 0; /* Spacing around the line */
+}

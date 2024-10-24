@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(120deg, #2b2b2b, #1c1c1c);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  height: 90vh;
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar {
+  background-color: #333;
+  width: 20%;
+  padding: 20px;
+  border-radius: 15px 0 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .logo {
+  width: 100px;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
+}
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  border-radius: 0 15px 15px 0;
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.main-content h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #4caf50;
+  position: relative;
+  text-align: center;
+}
+
+.main-content h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 4px;
+  background-color: #4caf50;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.skill-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.skill-level-text {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 10px;
+  text-transform: lowercase;
+}
+
+/* Skill Bar */
+.skill-bar {
+  width: 100%;
+  background-color: #444;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.skill-level {
+  height: 20px;
+  border-radius: 25px;
+  padding-right: 5px;
+  line-height: 20px;
+  text-align: right;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: loadSkill 1.5s ease-in-out forwards;
+}
+
+@keyframes loadSkill {
+  from {
+      width: 0;
+      opacity: 0.5;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Color bars with subtle gradients for Programming Languages */
+.python {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+.c {
+  background: linear-gradient(90deg, #f39c12, #f5b041);
+}
+
+.cpp {
+  background: linear-gradient(90deg, #f39c12, #f5b041);
+}
+
+.java {
+  background: linear-gradient(90deg, #2980b9, #3498db);
+}
+
+.csharp {
+  background: linear-gradient(90deg, #8e44ad, #9b59b6);
+}
+
+.go {
+  background: linear-gradient(90deg, #00add8, #00bcd4);
+}
+
+.javascript {
+  background: linear-gradient(90deg, #f1c40f, #f39c12);
+}
+
+.php {
+  background: linear-gradient(90deg, #899e9b, #a4b2ae);
+}
+
+.ruby {
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+/* Add these classes to your existing CSS file for Software Development */
+.kotlin {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+.flutter {
+  background: linear-gradient(90deg, #f39c12, #f5b041);
+}
+
+.react-native {
+  background: linear-gradient(90deg, #2980b9, #3498db);
+}
+
+.reactjs {
+  background: linear-gradient(90deg, #e74c3c, #ec7063);
+}
+
+.nodejs {
+  background: linear-gradient(90deg, #8e44ad, #9b59b6);
+}
+
+.expressjs {
+  background: linear-gradient(90deg, #16a085, #1abc9c);
+}
+
+.html {
+  background: linear-gradient(90deg, #f1c40f, #f39c12);
+}
+
+/* Add Database section styles here */
+.mysql {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+.mongodb {
+  background: linear-gradient(90deg, #f39c12, #f5b041);
+}
+
+.sequelize {
+  background: linear-gradient(90deg, #2980b9, #3498db);
+}
+
+.firebase {
+  background: linear-gradient(90deg, #e74c3c, #ec7063);
+}
+
+.amazon-s3 {
+  background: linear-gradient(90deg, #16a085, #1abc9c);
+}
+
+/* Add Designing Software section styles here */
+.photoshop {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+}
+
+.adobexd {
+  background: linear-gradient(90deg, #f39c12, #f5b041);
+}
+
+.sketch {
+  background: linear-gradient(90deg, #2980b9, #3498db);
+}
+
+.adobe-illustrator {
+  background: linear-gradient(90deg, #8e44ad, #9b59b6);
+}
+
+.gimp {
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+/* Add Operating Systems section styles here */
+.windows {
+  background: linear-gradient(90deg, #2980b9, #3498db);
+}
+
+.ubuntu {
+  background: linear-gradient(90deg, #e95420, #f9c34c); /* Ubuntu Orange */
+}
+
+.linux {
+  background: linear-gradient(90deg, #88c140, #b5de69); /* Linux Green */
+}
+
+.fedora {
+  background: linear-gradient(90deg, #294174, #4688c2); /* Fedora Blue */
+}
+
+.macos {
+  background: linear-gradient(90deg, #5c9cfa, #9cc3f5); /* MacOS Blue */
+}

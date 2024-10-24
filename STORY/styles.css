@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+  display: flex; /* Enable flexbox on the body */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  background-color: #310303; /* Light background for contrast */
+  color: #fbfbfb; /* Dark text for readability */
+}
+
+.container {
+  display: flex;
+  max-width: 1200px; /* Maximum width for the container */
+  margin: 0; /* No margin needed as it's centered */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background-color: #0f0101; /* Dark background for content */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.left-column {
+  flex: 1; /* Allow left column to take available space */
+  padding: 20px;
+  text-align: center;
+}
+
+.left-column h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px; /* Size for the quote */
+  margin-bottom: 20px; /* Space below the title */
+  color: #fff; /* White text for better contrast */
+}
+
+.profile-image {
+  width: 100%; /* Responsive width */
+  max-width: 300px; /* Maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for the image */
+}
+
+.right-column {
+  flex: 2; /* Right column takes more space */
+  padding: 20px;
+}
+
+.my-story-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; /* Title size */
+  margin-bottom: 15px; /* Space below title */
+  border-bottom: 2px solid #e91e63; /* Underline for the title */
+  padding-bottom: 10px; /* Space below underline */
+  color: #fff; /* White text for better contrast */
+}
+
+.resume-button {
+  display: inline-block; /* Button styling */
+  padding: 10px 20px; /* Button padding */
+  background-color: #e91e63; /* Button color */
+  color: #fff; /* Button text color */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 20px; /* Space above button */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.resume-button:hover {
+  background-color: #d81b60; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column; /* Stack columns on smaller screens */
+  }
+
+  .left-column, .right-column {
+      text-align: center; /* Center text on small screens */
+  }
+
+  .resume-button {
+      width: 100%; /* Full-width button on mobile */
+  }
+}

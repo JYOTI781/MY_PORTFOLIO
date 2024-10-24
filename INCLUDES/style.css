@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    /* Black background */
+    color: #ffffff;
+    /* White text */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header a div {
+    color: white;
+    text-decoration: none !important;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+    /* To position the pseudo-element */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    /* White text for links */
+    transition: color 0.3s ease;
+    /* Smooth transition for color */
+    padding: 10px 15px;
+    /* Adding some padding */
+    display: inline-block;
+    /* To make padding effective */
+}
+
+nav ul li a::after {
+    content: "";
+    /* Create an empty element */
+    position: absolute;
+    /* Position it absolutely within the list item */
+    left: 0;
+    /* Align it to the left */
+    bottom: 0;
+    /* Align it to the bottom */
+    width: 100%;
+    /* Full width */
+    height: 2px;
+    /* Height of the underline */
+    background-color: #ff9800;
+    /* Color of the underline */
+    transform: scaleX(0);
+    /* Start hidden */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the underline */
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+    /* Change color on hover */
+    text-decoration: none;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    /* Show the underline on hover */
+}
+
+.header-line {
+    height: 4px; /* Height of the line */
+    background: linear-gradient(to right, #e91e63, #ff9800); /* Gradient color */
+    margin: 10px 0; /* Spacing around the line */
+}
